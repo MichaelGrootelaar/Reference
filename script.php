@@ -7,16 +7,16 @@
   * @return string
   */
   function opschonen($woord){
-    return ucwords(strtolower($woord));
+    return ucwords(strtolower(trim($woord)));
   }
 
-  $a = ' dEzE TeKSt wOrDt opgeSchoond';
+  $a = ' dEzE TeKSt wOrDt opgeSchoond ';
   $b = &$a;
 
   $_SESSION['uitkomst'] = opschonen($b);
   $_SESSION['uitkomst2'] = $a;
 
-  $c = ' dEzE TeKSt wOrDt opgeSchoond';
+  $c = ' dEzE TeKSt wOrDt opgeSchoond ' ;
   $d = &$c;
 
   $_SESSION['uitkomst3'] = opschonen($c);
